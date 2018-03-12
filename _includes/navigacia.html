@@ -1,0 +1,14 @@
+			<!-- Navigacia -->
+			<nav id="nav">
+					<!--
+					<li class="active"><a href="index.html">Domov</a></li>
+					<li><a href="left-sidebar.html">O mne</a></li>
+					<li><a href="right-sidebar.html">Projekty</a></li>
+					<li><a href="no-sidebar.html">O stránke</a></li> 
+					-->				
+				<ul>
+				   {% for linka in site.data.navlinky.linky %}
+				      <li><a href="{{ linka.odkaz }}" alt="{{ linka.popis }}">{{ linka.nazov }}</a></li>
+				   {% endfor %}
+				</ul>
+			</nav>

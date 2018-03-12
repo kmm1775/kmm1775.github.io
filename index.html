@@ -1,0 +1,22 @@
+---
+layout: minusbocny
+---
+		<div id="content" class="8u skel-cell-important">
+			<section>
+				<header class="major">
+					<h2>Novinky</h2>
+					<span class="byline">Aktuálne dianie ohľadne projektov</span>
+				</header>
+				
+				{% comment %}
+					Tu sa generuju novinky z md suborov ako include.
+				{% endcomment %}
+				
+				{% for novinka in site.data.novinky %}
+  					<section class="abc">
+						{% capture nov %}{% include_relative novinky/{{novinka}} %}{% endcapture %}
+						{{ nov | markdownify }}
+  					</section>
+				{% endfor %}
+			</section>
+		</div>							

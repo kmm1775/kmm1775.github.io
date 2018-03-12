@@ -1,0 +1,24 @@
+---
+layout: minusbocny
+markdown: kramdown
+---
+
+	<div id="content" class="8u skel-cell-important">
+			<section>
+				<header class="major">
+					<h2>O stránke</h2>
+					<span class="byline">Informácie o tejto stránke...</span>
+				</header>
+        <p>Táto stránka bola vytvorená ako súčasť projektu pre predmet Webové publikovanie.</p>
+				
+				<h3>Sitemap</h3>
+				<ul>
+				{% for subor in site.html_pages %}
+					{% assign sub = subor.path %}
+					<li>{{ sub }}</li>
+				{% endfor %}
+				</ul>
+				
+			</section>
+		
+</div> 

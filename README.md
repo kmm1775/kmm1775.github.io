@@ -1,2 +1,2 @@
 # kmm1775.github.io
-Projekt 1 - Webove publikovanie
+Osobna webova prezentacie pre predmet WEBOVE PUBLIKOVANIE

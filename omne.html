@@ -1,0 +1,35 @@
+---
+layout: plusbocny
+---
+
+	<div id="content" class="8u skel-cell-important">
+			<section>
+				<header class="major">
+					<h2 id="prog">Programovacie jazyky</h2>
+					<span class="byline">Programovacie jazyky, ktoré používam...</span>
+				</header>
+				
+				<p>Programovaniu sa venujem niekoľko rokov, pričom som začal okolo roku 2007 tvorbou webových stránok v HTML a CSS
+				s použitým PHP. Po nástupe na škole som začal programovať v klasických programoacích jazykoch ako sú C resp. JAVA.
+				Programovaniu sa v poslednom čase venujem prevažne len v škole 😉</p>
+				<!-- generovanie jazykov z datasetu -->	
+				{% for jazyk in site.data.progjazyky %}
+				<div class="3u">
+					<a href="#" class="image"><img src="images/{{ jazyk.obrazok }}" alt=""></a>
+					<h3>{{ jazyk.nazov }}</h3>
+					<p>{{ jazyk.uroven }} ( {{jazyk.roky}} )<br /> {{ jazyk.popis }}</p>
+				</div>
+				{% endfor %}
+				
+				
+			</section>
+		
+		<!-- test dalsej sekcie -->
+			<section>
+				<header class="major">
+					<h2 id="hobby">Koníčky</h2>
+					<span class="byline">Moje záľuby</span>
+				</header>
+				<p>Medzi moje záľuby patria počítače, bicyklovanie a príroda.</p>
+			</section>
+</div> 

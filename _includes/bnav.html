@@ -1,0 +1,46 @@
+{% assign p1 = true %}
+{% assign p2 = false %}
+{% assign p3 = false %}
+
+<!-- Sidebar -->
+						<div id="sidebar" class="4u">
+							<section>
+								<header class="major">
+									<h2>O mne</h2>
+								</header>									
+								<ul class="default">
+									<li><a href="omne.html#prog">Programovacie jazyky</a></li>
+									<li><a href="omne.html#hobby">Hobby</a></li>
+								</ul>
+							</section>
+							<section>
+								<header class="major">
+									<h2>Projekty</h2>
+								</header>
+								<ul class="default">
+									
+									{% if p1 == true %}
+									<li><a href="projekt1.html">Projekt 1</a></li>
+									{% else %}
+									<li>Projekt 1</li>
+									{% endif %}
+									
+									
+									{% if p2 == true %}
+									<li><a href="projekt2.html">Projekt 2</a></li>
+									{% else %}
+									<li>Projekt 2</li>
+									{% endif %}
+								
+									
+				
+									{% if p3 == true %}
+									<li><a href="projekt3.html">Projekt 3</a></li>
+									{% else %}
+									<li>Projekt 3</li>
+									{% endif %}
+								
+									
+								</ul>
+							</section>
+						</div>

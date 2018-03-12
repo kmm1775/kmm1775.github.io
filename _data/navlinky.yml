@@ -1,0 +1,18 @@
+linky_nazov: Navigacia
+linky:
+
+- nazov: Domov
+  popis: Popis
+  odkaz: index.html
+
+- nazov: O mne
+  popis: Popis
+  odkaz: omne.html
+
+- nazov: Projekty
+  popis: Popis
+  odkaz: projekty.html
+  
+- nazov: O stranke
+  popis: Popis
+  odkaz: ostranke.html

@@ -1,0 +1,62 @@
+---
+layout: plusbocny
+---
+
+	<div id="content" class="8u skel-cell-important">
+			<section style="text-align: justify; text-justify: inter-word;">
+				<header class="major">
+					<h2>Projekt 1</h2>
+					<span class="byline">DOKUMENTÁCIA</span>
+				</header>
+				
+			<div style="list-style-type: circle !important;">
+				{% capture p1 %}{% include_relative projekty/projekt1.md %}{% endcapture %}
+				{{ p1 | markdownify }}
+			</div>
+				
+			<h3>Štruktúra</h3>
+
+<p>Stránka pozostáva celkovo zo 3 layoutov, pričom jeden z týchto layout-ov je hlavný layout od ktorého "dedia" zvyšné 2 layouti - stránka bez bočného menu a stránka s bočným menu.</p>
+				
+<p>Po obsahovej stránke je projekt rozdelení do statických HTML stránok kt. tvoria podstránky projektu. Sú to:</p>
+
+<p>
+<b>index.html</b> - hlavná stránka kt. obsahuje novinky. Každá novinka je reprezentovaná markdown súborom, kt. obsahuje popis novinky. Novinky sa pridávajú prostredníctvom cyklu.<br />
+<b>omne.html</b> - stránka obsahujúca môj osobný profil &nbsp; tj. developerský profil a koníčky. Jednotlivé položky - programovacie jazyky v developerskom profile sú generované prostredníctvom dátových sád obsiahnutých v súbore progjazyky.yml<br />
+<b>projekty.html</b> - hlavná stránka projektov.<br />
+<b>projekt1.html</b> - stránka pre projekt1 obsahujúca dokumentáciu a popis projektu. Po pridaní projektov 2 a 3 pribudnú unikátne stránky aj pre tieto projekty.<br />
+<b>ostranke.html</b> - obsahuje základné informácie o stránke.
+</p>
+
+<h4>Použité prvky</h4>
+<h5>Tagy a filtre</h5>
+				
+<p>
+<b>{% raw %}{% comment %}{% endraw %}</b> na odkomentovanie určitých častí kódu ako aj pre pridanie komentárov opisujúcich funkčnosť, použité napr. v súbore <b>index.html</b> pri <i>generovaní noviniek</i>.<br />
+</p>
+				
+<p>
+<b>{% raw %}{% for ... %}{% endraw %}</b> na generovanie <i>noviniek</i> resp. <i>ostatných dátových sád</i> repetetívne. Použité napríklad pri výpise používaných programovacích jazykov v súbore <b>omne.html</b>.<br />
+</p>
+				
+<p>
+<b>{% raw %}{% capture %}{% endraw %}</b> pre posúvanie vkladaných súborov prostredníctvom <b>{% raw %}{% include %}{% endraw %}</b> do markdown filtra <b>{% raw %}{% ... | markdownify %}{% endraw %}</b>. Použité napríklad pri vkladaní noviniek v súbore <b>index.html</b>, kde je novinka vo formáte markdown najskôr vložená do šablóny a následne je jej obsah presunutý do premennej a vygenerovaný prostredníctvom filtra <b>{% raw %}{% ... | markdownify %}{% endraw %}</b><br />
+</p>
+
+<p>
+filter <b>Markdownify</b> slúži na spracovanie markdown formátovania.<br />
+filter <b>Date to Long String</b> pre vypísanie aktuálneho dátumu.<br />
+</p>
+
+<h5>Premenné</h5>
+<p>Sú použité globálne premenné page.title a site.html_pages pre vypísanie zoznamu všetkých HTML stránok s ktorých je projekt tvorený. Ďalej sú použité custom premenné za účelom
+vykreslovania dátových sád a zisťovania prítomnosti projektov a vykreslovania ich liniek.</p>
+
+<h5>Plugin</h5>
+<p>Ako plugin som použil plugin <b><a href="https://github.com/yihangho/emoji-for-jekyll">Emoji for Jekyll</a></b>, ktorý umožnuje interpretovať emoji ikony v textoch. 
+
+<p>Pri tvorbe stránky som použil existujúce štýly pre šablónu z TEMPLATEDCO, ktorú som mierne upravil. Obrázky (logá) programovacích jazykov som prevzal z internetu.</p>
+	
+			</section>
+		
+</div> 

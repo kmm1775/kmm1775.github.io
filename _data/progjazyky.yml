@@ -1,0 +1,48 @@
+- nazov: C
+  obrazok: cecko.jpg
+  uroven: Pokročilý
+  roky: 6 rokov
+  popis: Môj hlavný programovací jazyk.
+    
+- nazov: C++
+  obrazok: cpp.jpg
+  uroven: Začiatočník
+  roky: 0,5 roka
+  popis: Nadstavba C.
+    
+- nazov: JAVA
+  obrazok: java.jpg
+  uroven: Mierne pokročilý
+  roky: 4 rokov
+  popis: Vývoj aplikácií.
+ 
+- nazov: SQL
+  obrazok: sql.jpg
+  uroven: Mierne pokročilý
+  roky: 2 roky
+  popis: Databázové technológie.
+    
+- nazov: BASH2
+  obrazok: bash2.jpg
+  uroven: Mierne pokročilý
+  roky: 3 roky
+  popis: Skriptovanie.
+ 
+- nazov: X/HTML
+  obrazok: html.jpg
+  uroven: Pokročilý
+  roky:  8 rokov
+  popis: Tvorba web aplikácií.
+    
+- nazov: CSS2
+  obrazok: css.jpg
+  uroven: Mierne pokročilý
+  roky: 3 roky
+  popis: Tvorba web aplikácií.
+    
+- nazov: x86 assembly
+  obrazok: x86.png
+  uroven: Začiatočník
+  roky: 1 rok
+  popis: Nízko úrovňové programovanie.
+  
