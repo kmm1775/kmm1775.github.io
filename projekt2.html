@@ -23,7 +23,36 @@ layout: plusbocny
     výchadzal z ukážkového súboru XML ako aj XSLT na wiki stránke predmetu WEBPUB.</p>
     
 		<h4>Bod 1. Štandardné členenie textu na kapitola, podkapitola, podpodkapitola, príloha, generovaný obsah</h4>
-				<p>Použil som štandardné elementy &lt;book&gt;</p>
+				<p>Použil som štandardné elementy &lt;book&gt;, &lt;chapter&gt;, &lt;section&gt;</p>
+				
+		<h4>Bod 2. zvýraznenie slov, zvýraznenie členenia textu odrážkami alebo číslovaním</h4>
+				<p>Použil som elementy &lt;itemizedlist&gt; a &lt;orderedlist&gt; pre zoznamy a tag &lt;emphasis&gt; pre
+				zvýraznenie textu</p>
+				
+		<h4>Bod 3. odkazy na iné časti vlastného dokumentu, prípadne odkazy na URL</h4>
+				<p>Použil som elementy &lt;itemizedlist&gt; a &lt;orderedlist&gt; pre zoznamy a tag &lt;emphasis&gt; pre
+				zvýraznenie textu. Odkaz na podkapitolu v dokumente bol realizovaný pomocou značky &lt;link&gt; s príslušným
+				id ukazujúcim na danú sekciu.</p>
+				
+		<h4>Bod 4. poznámka pod čiarou</h4>	
+				<p>Bola realizovaná značkou &lt;footnote&gt;</p>
+		
+		<h4>Bod 5. zoznam použitej literatúry a zdrojov vrátane ich citácie v texte</h4>	
+				<p>Zoznam použitej literatúry bol realizovaný prostredníctvom elementu &lt;bibliography&gt;, kde
+				jednotlivé sekcie &lt;bibliomixed&gt;, pričom na jednotlivé položky bibliografie sa v texte dokumentu
+				odkazuje/cituje prostredníctvom elementu &lt;xref&gt; s príslušným id.</p>
+				
+		<h4>Bod 6. vloženie obrázku a tabuliek, odkazy na ne v texte; zoznam obrázkov a tabuliek v úvode alebo závere textu</h4>
+				<p>Tabuľky boli vložené pomocou elementu &lt;table&gt; a jeho podriadených elementov štýlom akým je to
+				riešené v HTML, repetívne sekcie v tabuľke zľučujúce viacero buniek tabuľky boli riešené prostredníctvom
+					elementu  &lt;spanspec&gt;</p>
+				
+		<h4>Bod 7. vytvorenie registra pojmov (indexu) s pojmami hierarchicky usporiadanými do dvoch úrovni...</h4>
+				<p>Jednotlivé pojmy boli označené elementom &lt;indexterm&gt; s potomkami &lt;primary&gt; a &lt;secondary&gt;
+				pre dosiahnutie usporiadania do dvoch úrovní. Všetky pojmy sú nasledné "zozbierané" nepárnym
+					elementom &lt;index&gt; na konci dokumentu.</p>
+				
+				
 			</section>
 		
 </div> 
