@@ -1,4 +1,4 @@
-## Testovacia prevádzka
-11/03/2018
+## Zadanie 2
+16/04/2018
 
-Testovacia prevádzka.
+Bolo pridane zadanie 2.
