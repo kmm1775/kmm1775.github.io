@@ -1,0 +1,101 @@
+---
+layout: plusbocny
+---
+
+	<div id="content" class="8u skel-cell-important">
+			<section style="text-align: justify; text-justify: inter-word;">
+				<header class="major">
+					<h2>Projekt 2</h2>
+					<span class="byline">DOKUMENTÁCIA</span>
+				</header>
+				
+			<div style="list-style-type: circle !important;">
+				{% capture p1 %}{% include_relative projekty/projekt2.md %}{% endcapture %}
+				{{ p1 | markdownify }}
+			</div>
+				
+			<h3>Popis riešenia</h3>
+
+    <!-- sem obsah -->
+    
+    <h3>Úvod</h3>
+<p>Zadanie obsahuje ukážkový XML dokument transformovaný pomocou XSLT do jednotlivých HTML slajdov. Použitá schéma bola RELAXNG.</p>
+<h3>Použité elementy</h3>
+<p style="font-size: small;"> Znaková postupnosť v zátvorkách vyjadruje početnosť: &gt;n - <i>n a viac</i>, m/n - <i>práve m alebo n</i>, n - <i>práve n</i> </p>
+
+<ul>
+<li>element &lt;presentation&gt; - obaluje celú prezentácia</li>
+</ul>
+
+<h3>METADÁTA</h3>
+
+<ul>
+<li>element <b>&lt;meta&gt;</b> - obaľuje sekciu metadát <span style="font-size: small;">(1)</span></li>
+<li>element <b>&lt;authors&gt;</b> - obsahuje jednotlivých autorov prezentácie <span style="font-size: small;">(1)</span></li>
+<li>element <b>&lt;author&gt;</b> - zaobaľuje informácie o jednotlivcovi - autorovi <span style="font-size: small;">(>1)</span></li>
+<li>element <b>&lt;name&gt;</b> - obsahuje meno autora <span style="font-size: small;">(1)</span></li>
+<li>element <b>&lt;contact&gt;</b> - obsahuje kontakt na autora - jeho e-mailovú adresu <span style="font-size: small;">(0/1)</span></li>
+<li>element <b>&lt;creation&gt;</b> - obsahuje dodatočné metadáta o prezentácií <span style="font-size: small;">(1)</span></li>
+<li>element <b>&lt;created&gt;</b> - obsahuje dátum a čas vytvorenia <span style="font-size: small;">(1)</span></li>
+<li>element <b>&lt;lastedit&gt;</b> - obsahuje dátum a čas poslednej zmeny dokumentu <span style="font-size: small;">(1)</span></li>
+<li>element <b>&lt;editor&gt;</b> - obsahuje dáta o použitom editore napr. powerpoint <span style="font-size: small;">(1)</span></li>
+</ul>
+
+<h3>OBSAH / ŠTRUKTÚRA</h3>
+
+<ul>
+<li>element <b>&lt;slide&gt;</b> - element definujúci slajd prezentácie, môže obsahovať atribúty: <span style="font-size: small;">(1)</span></li>
+<li><ul>
+	<li><b>id:</b> vyjadrujúci typ slajdu (titulný, obyčajný, finálny)</li>
+	<li><b>transition:</b> typ prechodového efektu (niekoľko ukážkých typov ako fade, wipe alebo none)</li>
+	<li><b>width:</b> šírku plátna</li>
+	<li><b>height:</b> výšku plátna</li>
+	<li><b>font-size:</b> veľkosť fontov v slajde</li>
+</ul></li>
+</ul>
+
+<ul>
+<li>element <b>&lt;title&gt;</b> - element vyjadruje titulok/nadpis slajdu, je možné v ňom definovať inline elementy <span style="font-size: small;">(1)</span></li>
+<li>element <b>&lt;subtitle&gt;</b> - definuje podtitulok slajdu, je možné v ňom definovať inline elementy <span style="font-size: small;">(0/1)</span></li>
+<li>element <b>&lt;background&gt;</b> - definuje obrázok pozadia slajdu. Má atribúty: <span style="font-size: small;">(1)</span></li>
+	<ul>
+	<li><b>src</b> : zdrojový obrázok</li>
+	<li><b>repeat</b> : štýl opakovania vzoru pozadia, podobne ako v CSS</li>
+	</ul>
+	
+<li>element <b>&lt;content&gt;</b> - definuje obsahovú stránku slajdu, v ňom sú vnorené elementy: <span style="font-size: small;">(1)</span></li>
+<li><b>&lt;textbox&gt;</b> - textový odstavec <span style="font-size: small;">(>0)</span></li>
+<li><b>&lt;header&gt;</b> - nadpis <span style="font-size: small;">(>0)</span></li>
+<li><b>&lt;list&gt;</b> a <b>&lt;item&gt;</b> - zoznam a položka zoznamu <span style="font-size: small;">(>0)</span></li>
+<li><b>&lt;picture&gt;</b> - obrázok (párny element umožnujúci vložiť aj jeho popis) <span style="font-size: small;">(>0)</span></li>
+
+</ul>
+
+<p>Elementy v rámci elementu content je možné absolútne pozicovať lubovoľný element tak ako v skutočnej prezentácií.
+Toto je umožnené pomocou atribútov <b>posx</b> a <b>posy</b>. Elementy v rámci elementu obsah môžu obsahovať inline elementy.</p>
+
+<h3>INLINE ELEMENTY</h3>
+
+<ul>
+<li><b>&lt;bold&gt;</b> - hrubé zvýraznenie</li>
+<li><b>&lt;emphasis&gt;</b> - sémantické zvýrazenie</li>
+<li><b>&lt;italic&gt;</b> - kurzíva</li>
+<li><b>&lt;color&gt;</b> - s parametrom which definujúcim meno farby alebo jej čiselenú hodnotu.</li>
+<li><b>&lt;comment&gt;</b> - komentár</li>
+</ul>
+
+<p><b>Početnosť:</b> žiadny z elementov nie je povinný.</p>
+
+<hr />
+
+<h3>VALIDÁCIA</h3>
+
+<p>
+Ako schéma dokumentu bola používa nesimplifikovaná schéma typu RELAXNG.
+Ako validátor bol použitý jing.
+</p>
+				
+				
+			</section>
+		
+</div> 
